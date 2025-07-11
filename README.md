@@ -3,6 +3,7 @@
 # Podman Compose E-Mail
 __A set of containers for dovecot and postfix that both use a maildir for easy processing by automated services.__
 
- - [ ] Create dovecot container
  - [ ] Create postfix container
+   - [x] Create a debian container with postfix installed
+ - [ ] Create dovecot container
  - [ ] Connect the two with podman-compose
