@@ -1,0 +1,20 @@
+version: "3"
+
+volumes:
+  maildir_vol:
+
+networks:
+  mail_vlan:
+    driver: bridge
+
+services:
+  postfix:
+    build: postfix-resources
+    image: postfix
+    container_name: postfix
+    environment:
+    networks:
+      - mail_vlan
+    volumes:
+      - maildir_vol:/run/maildir/sam
+    restart: unless-stopped
