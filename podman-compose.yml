@@ -13,6 +13,9 @@ services:
     image: postfix
     container_name: postfix
     environment:
+    ports:
+      - "8025:25"
+      - "8465:465"
     networks:
       - mail_vlan
     volumes:
