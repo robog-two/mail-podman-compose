@@ -47,3 +47,6 @@ myorigin = /etc/mailname
 
 # Log to stdout for docker (we capture this log on the host system so there's no need to rotate log files in the container)
 maillog_file = /dev/stdout
+
+# Use maildir
+home_mailbox = Maildir/

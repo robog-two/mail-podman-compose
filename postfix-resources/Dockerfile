@@ -2,6 +2,8 @@ FROM docker.io/debian:latest
 
 RUN apt update && apt upgrade -y && apt install -y postfix systemd
 
+RUN useradd -ms /bin/bash sam
+
 COPY etc-aliases /etc/aliases
 COPY etc-mailname /etc/mailname
 COPY main.cf /etc/postfix/main.cf

@@ -19,5 +19,5 @@ services:
     networks:
       - mail_vlan
     volumes:
-      - maildir_vol:/run/maildir/sam
+      - maildir_vol:/home/sam/Maildir/
     restart: unless-stopped
